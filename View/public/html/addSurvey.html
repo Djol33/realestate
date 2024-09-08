@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Survey</title>
+    <script src="View/public/js/error.js" type="application/javascript"></script>
+    <script src="View/public/js/header.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="View/public/css/style.css" type="text/css"/>
+</head>
+<body>
+
+    <form action="addsurvey" method="post" id="support1" style="width:500px; margin:0px auto">
+        <label for="title1">Title</label>
+        <input type="text" name="title" id="title1">
+        <label for="question">Question</label>
+        <input type="text" name="question" id="question">
+        <label for="typeResp">Type Of Response</label>
+        <select id="selectTypeResp"  name="typeResp">
+
+        </select>
+        <div id ="fields">
+
+        </div>
+        <input type="submit" id="submit"/>
+    </form>
+    <script  type="application/javascript" src="View/public/js/fieldTypes.js"  ></script>
+    
+</body>
+</html>

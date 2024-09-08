@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="View/public/css/style.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/104d21a00f.js" type="application/javascript" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Find the best house/apartment/cottage for living or going for a weekend, enjoy infinite opportunities">
+    
+    <meta name="keywords" content="Sell Apartment,Sell, house, flat  , Nekretnine">
+    
+    <script  src="View/public/js/regex.js"  type="application/javascript"></script>
+    <script  src="View/public/js/cityList.js" type="application/javascript"></script>
+    <script src="View/public/js/addApartment.js" type="application/javascript"></script>
+    <script src="View/public/js/header.js" type="application/javascript"></script>
+    <script src="View/public/js/error.js" type="application/javascript"></script>
+    <script src="View/public/js/addApartmentFormValidate.js" type="application/javascript"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="method" enctype="multipart/form-data" action="addApartment" method="POST" >
+        <label for="title1">Title</label>
+        <input type="text" id="title1" name="title" placeholder="Title" required="required" error="Enter valid title"/>
+        <label for="select" >Select city</label>
+        <select name="city" id="city" required="required" error="Select a city" >
+            <option value="0"  disabled selected>Select city</option>
+        </select>
+        <label for="adresa">Adress</label>
+        <input type="text" id="adresa" name="adresa" required="required"  error="Enter adress (ex. Ruzveltova 12)"/>
+        <label for="tipObjekta">Type Of Building</label>
+        <select name="tipObjekta" id="tipObjekta" required="required" error="Select type of real estate">
+            <option value="0"  disabled selected>Select type of building</option>
+        </select>
+        <label for="numberrooms">Number of rooms</label>
+        <input type="number" id="numberrooms" error="Enter number of rooms (ex 2.5)" name="numberrooms" min="0.5" step="0.5" max="10" required="required"/>
+        <label for="terasa">Does it have a terrace/balcony</label>
+        <div id="terasa">
+            <div>            <input type="radio" name="terasa" id="prvi" value="Da" placeholder="Da" data-error = "Select one of the values"/> <label for="prvi">Yes</label>
+            </div>
+<div>
+    <input type="radio" name="terasa" id="drugi" value="Ne"/> <label for="prvi">No</label>
+
+</div>
+
+        </div>
+        <label for="kvadratura" >Area</label>
+        <input type="number" id="kvadratura" error="Enter area of building" name="kvadratura" required="required" min="1"/>
+
+        <label for="cena">Total price</label>
+        <input type="number" id="cena" name="cena" error="Enter price" required="required" min="0" step="500">
+        <label for="dodatniopis">Description</label>
+        <input type="text" id="dodatniopis" error="Add additional description" name="dodatniopis">
+        <input type="file" multiple="multiple" id="images" name ="images[]"  accept="image/jpeg, image/png, image/jpg"/>
+        <label for="images" id="file">Add images</label>
+        <input type="submit" id="predaj" type="button" value="Submit"/>
+    </form>
+
+</body>
+
+
+
+</html>

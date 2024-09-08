@@ -1,0 +1,227 @@
+
+
+@media screen and (max-width: 1140px) {
+    #allApartments{
+        #apartments{
+            .blockApartment{
+                margin-left:auto;
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+        #filter{
+
+            #filters{
+                width:100%;
+                input,select{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #realestatepost{
+        div#images {
+            grid-template-columns: repeat(3, 1fr); /* Keep 3 columns */
+            grid-template-rows: repeat(4, minmax(100px)) auto; /* Same structure for rows */
+            .main {
+                grid-column: 1 / span 3; /* Main image still spans all columns */
+                grid-row: 1 / span 3; /* Main image spans 3 rows */
+                width: 100%;
+                height: 100%; /* Ensure full height */
+                object-fit: cover; /* Prevents distortion */
+            }
+        
+            .sidebar1  {
+                grid-row: 4; /* Last row */
+                grid-column: 1;
+                width: 100%;
+                height: auto; /* Auto height to adapt to content */
+                display: block;
+                height:100%;
+                &.d-none { display: none; } /* Sidebar images will only show if they exist */
+            }
+            .sidebar2  {
+                grid-row: 4; /* Last row */
+                grid-column: 2;
+                width: 100%;
+                height: auto; /* Auto height to adapt to content */
+                display: block;
+                height:100%;
+                &.d-none { display: none; } /* Sidebar images will only show if they exist */
+            }
+            .sidebar3  {
+                grid-row: 4; /* Last row */
+                grid-column: 3;
+                width: 100%;
+                height:100%;
+                height: auto; /* Auto height to adapt to content */
+                display: block;
+                &.d-none { display: none; } /* Sidebar images will only show if they exist */
+            }
+        }
+    
+      
+    }
+
+
+}
+@media screen and (max-width: 768px) {
+    .overlay{
+        .imgholder{
+            width:100vw;
+            height:100vh;
+            background-color: $darkgray;
+            image{
+                width:100%;
+                max-width: 100%;
+                height:100%;
+                max-height: 100%;
+            }
+        }
+    }
+    html{
+        font-size: 14px;
+    }
+    #title{
+        margin:15px 5px 15px 5px;
+        position:static;
+ 
+    }
+    #allApartments{
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(21, auto);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+        height: fit-content;
+        #filter { grid-area: 1 / 1 / 2 / 2; 
+            position: static !important;
+        width:100%;
+    max-width: 100%;}
+            #apartments { grid-area: 2 / 1 / 22 / 2 !important ;
+                overflow-y:unset;
+                min-height:unset;
+                //height: fit-content;
+                height: max-content;
+            .blockApartment{
+                width: 100%;
+                margin-left:0px;
+                margin-right: 0px;
+                
+                margin:0px auto !important;
+                margin-bottom: 10px !important;
+            } }
+
+        }
+        
+    header{
+        i.toggle{
+            display: block;
+        }
+        ul, a#user{
+            box-sizing: border-box;
+            padding-top: 10px;
+            display: none;
+            li:first-child{
+                padding: 0px;
+            }
+            li{ 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                ul{
+                position:static;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width:100%;
+                padding: 0px;
+                color:$darkgray
+                ;background-color: transparent;
+                border:0px;
+                text-align: center;
+                li{
+                    &:first-child{
+                        padding:5px !important;
+                    }
+                    text-align: center;
+                    display: block;
+                    a{
+                        text-align: center;
+                    }
+                }
+                
+            }}
+        }
+ 
+
+    }
+    footer{
+        ul{
+            flex-direction: column;
+        }
+    }
+ 
+}
+
+
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 12px;
+    }
+    form{
+
+        width:80%;
+        margin:0px auto;
+    }
+
+    #allApartments{
+    
+        padding: 5px;
+       
+ 
+            #apartments {  
+            .blockApartment{
+               #image{
+                display: none;
+               }
+               #col3{
+                .priceSqm{
+                    display: none;
+                }
+                .price{
+                    font-size: 1.2rem;
+                    padding:0px;
+                    margin-bottom: 7px;
+                    margin-right: 7px;
+                }
+               }
+            } }
+
+        }
+        
+        #realestatepost{    margin:0px;
+            h1{
+                font-size: 1.3rem;
+            }
+       /*     div#images{
+                                grid-template-rows: 100px 100px 100px 100px !important;
+            }*/
+            #basic_info{
+
+                span{
+                    height: auto;
+                    width:22%;
+                    height:60px;
+                    flex-shrink: 1;
+                }
+            }
+        }
+
+}
+

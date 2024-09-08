@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Apartments</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Find the best house/apartment/cottage for living or going for a weekend, enjoy infinite opportunities">
+    
+    <meta name="keywords" content="Beograd, Novi Sad,Flat, Cottage , Nekretnine">
+    
+    <link rel="stylesheet" href="View/public/css/style.css" type="text/css"/>
+    <script src="View/public/js/header.js"></script>
+    <script src="View/public/js/error.js" type="application/javascript"></script>
+
+    <script  src="View/public/js/cityList.js"  type="application/javascript"></script>
+    <script src="View/public/js/addApartment.js"  type="application/javascript"></script>
+
+    <script src="https://kit.fontawesome.com/104d21a00f.js"  type="application/javascript" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    <h1 id="title">All Apartments </h1>
+    <div id="allApartments">
+
+        <div id="filter">
+            <form id="filters">
+                <label for="search">Search</label>
+                <input type="text" id="search" name="search" placeholder="Seach list of apartments"/>
+                
+                <label for="tipObjekta">Type of Real Estate</label>
+                <select name="tipObjekta" id="tipObjekta" required="required">
+                    <option value="0"  >All</option>
+                </select>
+                <label for="select">Select city</label>
+                <input type="text" name="cityconsole" list="city" id="cityconsole" placeholder="Select city">
+                <datalist name="city" id="city" required="required">
+ 
+                </datalist>
+                <div id="selectedCities">
+
+                </div>
+                <input type="submit" id="submit" disabled>
+                <input type="hidden" name="hidden" id="hidden" value="">
+            </form>
+
+        </div>
+        <div id="apartments">
+
+        </div>
+    </div>
+    <div id="pagination"></div>
+    <script src="View/public/js/filterAllApartments.js" type="application/javascript"></script>
+    <script src="View/public/js/citydatadynamic.js" type="application/javascript"></script>
+    <script src="https://kit.fontawesome.com/104d21a00f.js"  type="application/javascript" crossorigin="anonymous"></script>
+
+</body>
+</html>

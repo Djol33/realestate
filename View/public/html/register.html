@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="View/public/css/style.css" type="text/css">
+    <script src="View/public/js/header.js"  type="application/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Register to find the best house/apartment/cottage for living or going for a weekend, enjoy infinite opportunities">
+    
+    <meta name="keywords" content="Beograd, Novi Sad,Flat, Cottage , Nekretnine">
+    <style>
+        body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+    </style>
+    <title> Register</title>
+</head>
+<body>
+    <form action="#" id="firstForm">
+        <h1>Register</h1>
+        <label for="fName">First Name</label>
+        <input type="text" id="fName" name="lName"/>
+        <label for="lName">Last Name</label>
+        <input type="text" id="lName" name="lName"/>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"/>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"/>
+        <label for="confPassword">Confirm Password</label>
+        <input type="password" name="confPassword" id="confPassword"/>
+        <div id="holdButtons">
+            <!--<input type="button" value="Already have account?" class="border"/>-->
+            <a href="login" class="border">Already have account?</a>
+            <input type="button" value="Next" class="noBorder" id="next"/>
+        </div>
+
+    </form>
+    <script  src="View/public/js/regex.js" type="application/javascript" ></script>
+    <script src="View/public/js/form.js" type="application/javascript"></script>
+</body>
+</html>

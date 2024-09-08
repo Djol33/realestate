@@ -1,0 +1,38 @@
+version: '2'
+services:
+  www:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/var/www/html"
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - web-db-net
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.mysql
+    ports:
+      - 3306:3306
+    networks:
+      - web-db-net
+    environment:
+      MYSQL_USER: Korsnik1233
+      MYSQL_PASSWORD: Korisnik1233
+      MYSQL_DATABASE: korisnici
+      MYSQL_ROOT_PASSWORD: rootpw
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8001:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+    networks:
+      - web-db-net
+networks:
+  web-db-net:
+    name: web-db-net

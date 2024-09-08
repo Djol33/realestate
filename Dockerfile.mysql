@@ -1,0 +1,10 @@
+# Use the official MySQL image as the base image
+FROM mysql:latest
+
+# Set the root user password (change 'your_mysql_root_password' to your desired password)
+ENV MYSQL_ROOT_PASSWORD=rootpw
+
+# Optionally, create a new user and database (change 'your_username', 'your_password', and 'your_database' to your desired values)
+
+# Copy a custom SQL script to initialize the database (if required)
+COPY test-db.sql /docker-entrypoint-initdb.d/
